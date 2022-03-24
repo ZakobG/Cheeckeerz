@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Checkers</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+
+<div class="title">
+  <h1>Cheeckers</h1>
+</div>
+
+<table class="board">
+  <tr *ngFor="let row of playground; let x = index">
+    <th class="field" *ngFor="let column of row; let y = index" [class.black]= "this.playground[x][y].color == 'b'">
+      <span class="figure">{{this.playground[x][y].figure}}</span>
+    </th>
+  </tr>
+</table>
+
+
+
+</body>
+</html>

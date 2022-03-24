@@ -1,0 +1,26 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  background: darkslategrey;
+}
+.title {
+  text-align: center;
+  font-family: "Copperplate Gothic Light";
+  font-size: 25px;
+}
+.board {
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 5px;
+  height: 800px;
+  width: 800px;
+  margin: auto;
+  background: white;
+}
+.black {
+  background: gray;
+}
+.figure {
+  padding: 1px;
+  font-size: 35px;
+  font-weight: lighter;
+}
