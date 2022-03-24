@@ -13,6 +13,7 @@ export class AppComponent {
     figure: "",
   }
 
+  // Default Array of "a"
   playground: any[][] = [
     ["a", "a", "a", "a", "a", "a", "a", "a"],
     ["a", "a", "a", "a", "a", "a", "a", "a"],
@@ -23,6 +24,9 @@ export class AppComponent {
     ["a", "a", "a", "a", "a", "a", "a", "a"],
     ["a", "a", "a", "a", "a", "a", "a", "a"],];
 
+  // This makes it look like a chess board
+  // NOT "a","a","a","a"
+  // but "b","a","b","a"
   ngOnInit() {
     for (var i = 0; i < this.playground.length; i++) {
       for (var j = 0; j < this.playground.length; j++) {
@@ -39,6 +43,7 @@ export class AppComponent {
     this.placeFigures()
   }
 
+  // This is dropping black and white figures in their place
   placeFigures(): void {
     for (var i = 0; i < 8; i++) {
       for (var j = 0; j < 8; j++) {

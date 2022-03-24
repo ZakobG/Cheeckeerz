@@ -14,13 +14,13 @@
 </div>
 
 <table class="board">
-  <tr *ngFor="let row of playground; let x = index">
-    <th class="field" *ngFor="let column of row; let y = index" [class.black]= "this.playground[x][y].color == 'b'">
-      <span class="figure">{{this.playground[x][y].figure}}</span>
+  <tr class="field" *ngFor="let row of playground; let x = index">
+    <th *ngFor="let column of row; let y = index" [class.black]="this.playground[x][y].color == 'b'">
+      <img *ngIf="this.playground[x][y].figure == '⛂' " src="assets/zaludi/bz.png">
+      <img *ngIf="this.playground[x][y].figure == '⛀' " src="assets/zaludi/wz.png">
     </th>
   </tr>
 </table>
-
 
 
 </body>
