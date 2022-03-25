@@ -11,7 +11,9 @@ export class AppComponent {
   pole = {
     color: "a",
     figure: "",
+    selected: false,
   }
+
 
   // Default Array of "a"
   playground: any[][] = [
@@ -24,9 +26,7 @@ export class AppComponent {
     ["a", "a", "a", "a", "a", "a", "a", "a"],
     ["a", "a", "a", "a", "a", "a", "a", "a"],];
 
-  // This makes it look like a chess board
-  // NOT "a","a","a","a"
-  // but "b","a","b","a"
+  // Creates chess board
   ngOnInit() {
     for (var i = 0; i < this.playground.length; i++) {
       for (var j = 0; j < this.playground.length; j++) {
@@ -43,7 +43,13 @@ export class AppComponent {
     this.placeFigures()
   }
 
-  // This is dropping black and white figures in their place
+  // If you click on some field you can see a count of your true clicks in console
+  select(x:number, y:number) : void {
+    this.playground[x][y].selected = true;
+    console.log(this.playground[x][y].selected)
+  }
+
+  // Figures on black fields
   placeFigures(): void {
     for (var i = 0; i < 8; i++) {
       for (var j = 0; j < 8; j++) {
@@ -56,4 +62,9 @@ export class AppComponent {
       }
     }
   }
+
+  move(x:number, y:number) : void {
+
+  }
+
 }

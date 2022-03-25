@@ -10,12 +10,12 @@
 <body>
 
 <div class="title">
-  <h1>Cheeckers</h1>
+  <h1>Checkers</h1>
 </div>
 
 <table class="board">
   <tr class="field" *ngFor="let row of playground; let x = index">
-    <th *ngFor="let column of row; let y = index" [class.black]="this.playground[x][y].color == 'b'">
+    <th (click)="select(x,y)" *ngFor="let  column of row; let y = index" [class.black]="this.playground[x][y].color == 'b'">
       <img *ngIf="this.playground[x][y].figure == '⛂' " src="assets/zaludi/bz.png">
       <img *ngIf="this.playground[x][y].figure == '⛀' " src="assets/zaludi/wz.png">
     </th>

@@ -2,13 +2,11 @@
 body {
   background: darkslategrey;
 }
-
 .title {
   text-align: center;
   font-family: "Copperplate Gothic Light";
   font-size: 25px;
 }
-
 .board {
   border-style: solid;
   border-width: 2px;
@@ -16,13 +14,11 @@ body {
   height: 800px;
   width: 800px;
   margin: auto;
-  background: white;
+  background: whitesmoke;
 }
-
 .black {
-  background: gray;
+  background: lightslategray;
 }
-
 .field {
   height: 80px;
   width: 80px;
